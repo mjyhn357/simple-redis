@@ -1,6 +1,6 @@
 # Simple Redis - Python实现的Redis服务器
 
-🚀 一个基于Python和Twisted框架实现的简化版Redis服务器，支持基本的Redis协议和命令。
+一个基于Python和Twisted框架实现的简化版Redis服务器，支持基本的Redis协议和命令。
 
 ## ✨ 功能特性
 
@@ -41,37 +41,32 @@ simple_redis/
 - Python 3.8+
 - Twisted框架
 
-### 安装依赖
-
-# 创建虚拟环境
+### 创建虚拟环境
 python -m venv redis_env
 source redis_env/bin/activate  # Linux/Mac
-# 或 redis_env\Scripts\activate  # Windows
+或 redis_env\Scripts\activate  # Windows
 
-# 安装依赖
+### 安装依赖
 pip install twisted
 
-# 方法1：直接启动
+### 方法1：直接启动
 python redis-server.py
 
-# 方法2：使用管理脚本
+### 方法2：使用管理脚本
 chmod +x redis_manager.sh
 ./redis_manager.sh start
 
-# 使用自带客户端
+### 使用自带客户端
 python redis-client.py
 
-# 或使用telnet
+### 或使用telnet
 telnet localhost 6379
 
-# 或使用redis-cli（如果安装了）
+### 或使用redis-cli（如果安装了）
 redis-cli -h localhost -p 6379
 
-# 连接到服务器
+### 连接到服务器
 $ python redis-client.py
-
-redis> PING
-PONG
 
 redis> SET mykey hello
 OK
@@ -89,12 +84,12 @@ redis> GET mykey
 (nil)
 
 
-## 添加新命令
+### 添加新命令
 在 redis-server.py 中添加命令处理函数
 在 handle_command 方法中注册命令
 添加相应的测试用例
 
-## 架构说明
+### 架构说明
 协议层：RESP协议解析和构造
 命令层：Redis命令实现
 存储层：内存数据结构
