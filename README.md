@@ -43,7 +43,6 @@ simple_redis/
 
 ### 安装依赖
 
-```bash
 # 创建虚拟环境
 python -m venv redis_env
 source redis_env/bin/activate  # Linux/Mac
@@ -90,12 +89,12 @@ redis> GET mykey
 (nil)
 
 
-添加新命令
+## 添加新命令
 在 redis-server.py 中添加命令处理函数
 在 handle_command 方法中注册命令
 添加相应的测试用例
 
-架构说明
+## 架构说明
 协议层：RESP协议解析和构造
 命令层：Redis命令实现
 存储层：内存数据结构
@@ -107,8 +106,8 @@ redis> GET mykey
 部分高级命令未实现
 无用户认证
 
-许可证
+## 许可证
 MIT License
 
-👨‍💻 作者
+## 👨‍💻 作者
 hanch - 学习项目
